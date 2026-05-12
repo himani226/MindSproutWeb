@@ -1,0 +1,1184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta name="description"
+		content="MindSprout Technologies Internship Programs — AI & Agentic Engineer, Spatial Computing, MERN + AI, Data Science with Python. Next batch starts 4 June 2026.">
+	<meta name="keywords"
+		content="AI internship, Agentic AI, Spatial Computing, MERN, Data Science, Python, MindSprout Technologies">
+	<meta name="author" content="MindSprout Technologies">
+	<!-- Page Title -->
+	<title>Internships — MindSprout Technologies</title>
+	<!-- Favicon Icon -->
+	<link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+	<!-- Google Fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com/">
+	<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+	<!-- Bootstrap Css -->
+	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+	<!-- SlickNav Css -->
+	<link href="css/slicknav.min.css" rel="stylesheet">
+	<!-- Swiper Css -->
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<!-- Font Awesome -->
+	<link href="css/all.min.css" rel="stylesheet" media="screen">
+	<!-- Animated Css -->
+	<link href="css/animate.css" rel="stylesheet">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Mouse Cursor -->
+	<link rel="stylesheet" href="css/mousecursor.css">
+	<!-- Main Custom Css -->
+	<link href="css/custom.css" rel="stylesheet" media="screen">
+
+	<style>
+		/* ── Internship-specific overrides (no change to template base) ── */
+
+		/* Batch Banner */
+		.batch-banner {
+			background: var(--accent-color);
+			text-align: center;
+			padding: 14px 20px;
+		}
+
+		.batch-banner p {
+			margin: 0;
+			font-size: 15px;
+			font-weight: 700;
+			color: #fff;
+			letter-spacing: 0.04em;
+		}
+
+		.batch-banner p span {
+			background: #fff;
+			color: var(--accent-color);
+			border-radius: 4px;
+			padding: 2px 10px;
+			margin-left: 8px;
+			font-weight: 800;
+		}
+
+		/* Program cards — built on service-item pattern */
+		.internship-card {
+			background: var(--secondary-color) url('../images/service-item-bg.svg');
+			background-size: cover;
+			border-radius: 16px;
+			padding: 36px 32px 32px;
+			margin-bottom: 30px;
+			transition: all 0.3s ease;
+			position: relative;
+			overflow: hidden;
+			height: 100%;
+		}
+
+		.internship-card::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 3px;
+			height: 0;
+			background: var(--accent-color);
+			transition: height 0.4s ease;
+		}
+
+		.internship-card:hover::before {
+			height: 100%;
+		}
+
+		.internship-card:hover {
+			transform: translateY(-6px);
+			box-shadow: 0 20px 60px rgba(13, 165, 224, 0.15);
+		}
+
+		.internship-card .card-label {
+			display: inline-block;
+			font-size: 11px;
+			font-weight: 700;
+			letter-spacing: 0.12em;
+			text-transform: uppercase;
+			color: var(--accent-color);
+			border: 1px solid var(--accent-color);
+			border-radius: 20px;
+			padding: 4px 14px;
+			margin-bottom: 18px;
+		}
+
+		.internship-card .card-label.highlight {
+			background: var(--accent-color);
+			color: #fff;
+		}
+
+		.internship-card h3 {
+			font-size: 20px;
+			font-weight: 700;
+			color: var(--primary-color);
+			line-height: 1.35;
+			margin-bottom: 12px;
+		}
+
+		.internship-card .card-desc {
+			font-size: 14px;
+			line-height: 1.75;
+			color: var(--text-color);
+			margin-bottom: 24px;
+		}
+
+		.internship-card .card-meta {
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap;
+			margin-bottom: 24px;
+		}
+
+		.internship-card .card-meta-item {
+			display: flex;
+			align-items: center;
+			gap: 7px;
+			font-size: 13px;
+			font-weight: 600;
+			color: var(--primary-color);
+		}
+
+		.internship-card .card-meta-item i {
+			color: var(--accent-color);
+			font-size: 14px;
+		}
+
+		/* Highlights list */
+		.highlight-label {
+			font-size: 11px;
+			font-weight: 700;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+			color: var(--accent-color);
+			margin-bottom: 12px;
+		}
+
+		.highlights-list {
+			list-style: none;
+			padding: 0;
+			margin: 0 0 28px;
+			display: flex;
+			flex-direction: column;
+			gap: 10px;
+		}
+
+		.highlights-list li {
+			font-size: 13.5px;
+			color: var(--text-color);
+			line-height: 1.55;
+			padding-left: 22px;
+			position: relative;
+		}
+
+		.highlights-list li::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 8px;
+			width: 8px;
+			height: 8px;
+			border-radius: 50%;
+			background: var(--accent-color);
+		}
+
+		/* Modules accordion inside card */
+		.modules-toggle {
+			background: none;
+			border: 1px solid var(--divider-color);
+			border-radius: 8px;
+			padding: 11px 18px;
+			font-size: 13px;
+			font-weight: 600;
+			color: var(--primary-color);
+			cursor: pointer;
+			width: 100%;
+			text-align: left;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			transition: all 0.3s ease;
+			margin-bottom: 12px;
+		}
+
+		.modules-toggle:hover {
+			border-color: var(--accent-color);
+			color: var(--accent-color);
+		}
+
+		.modules-toggle i {
+			transition: transform 0.3s ease;
+		}
+
+		.modules-toggle.open i {
+			transform: rotate(180deg);
+		}
+
+		.modules-body {
+			display: none;
+			padding: 6px 0 16px;
+		}
+
+		.modules-body.open {
+			display: block;
+		}
+
+		.modules-body ol {
+			padding-left: 18px;
+			margin: 0;
+		}
+
+		.modules-body ol li {
+			font-size: 13px;
+			color: var(--text-color);
+			line-height: 1.7;
+			padding: 3px 0;
+		}
+
+		/* Enroll button inside card */
+		.card-enroll-btn {
+			display: inline-block;
+			background: var(--accent-color);
+			color: #fff !important;
+			font-size: 13px;
+			font-weight: 700;
+			letter-spacing: 0.06em;
+			text-transform: uppercase;
+			padding: 12px 28px;
+			border-radius: 30px;
+			text-decoration: none;
+			transition: all 0.3s ease;
+			margin-top: 4px;
+		}
+
+		.card-enroll-btn:hover {
+			background: #fff;
+			color: var(--accent-color) !important;
+			box-shadow: 0 8px 30px rgba(13, 165, 224, 0.3);
+		}
+
+		/* What you get grid */
+		.get-grid {
+			display: grid;
+			grid-template-columns: repeat(4, 1fr);
+			gap: 24px;
+		}
+
+		.get-item {
+			background: var(--secondary-color);
+			border-radius: 14px;
+			padding: 30px 24px;
+			text-align: center;
+			border: 1px solid var(--divider-color);
+			transition: all 0.3s ease;
+		}
+
+		.get-item:hover {
+			border-color: var(--accent-color);
+			transform: translateY(-4px);
+		}
+
+		.get-item .get-icon {
+			font-size: 30px;
+			margin-bottom: 14px;
+			display: block;
+		}
+
+		.get-item h4 {
+			font-size: 15px;
+			font-weight: 700;
+			color: var(--primary-color);
+			margin-bottom: 8px;
+		}
+
+		.get-item p {
+			font-size: 13px;
+			color: var(--text-color);
+			line-height: 1.65;
+			margin: 0;
+		}
+
+		@media (max-width: 991px) {
+			.get-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+		}
+
+		@media (max-width: 576px) {
+			.get-grid {
+				grid-template-columns: 1fr;
+			}
+
+			.internship-card {
+				padding: 26px 20px 22px;
+			}
+		}
+	</style>
+</head>
+
+<body>
+
+	<!-- Preloader Start -->
+	<div class="preloader">
+		<div class="loading-container">
+			<div class="loading"></div>
+			<div id="loading-icon"><img src="images/loader.svg" alt=""></div>
+		</div>
+	</div>
+	<!-- Preloader End -->
+
+	<!-- Header Start -->
+	<header class="main-header">
+		<div class="header-sticky">
+			<nav class="navbar navbar-expand-lg">
+				<div class="container">
+					<a class="navbar-brand" href="index.html">
+						<img src="images/logo.svg" alt="MindSprout Technologies">
+					</a>
+					<div class="collapse navbar-collapse main-menu">
+						<div class="nav-menu-wrapper">
+							<ul class="navbar-nav mr-auto" id="menu">
+								<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+								<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+								<li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+								<li class="nav-item submenu"><a class="nav-link" href="#">Programs</a>
+									<ul>
+										<li class="nav-item"><a class="nav-link" href="internships.html">Internships</a>
+										</li>
+										<li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
+										<li class="nav-item"><a class="nav-link" href="team.html">Our Team</a></li>
+										<li class="nav-item"><a class="nav-link"
+												href="testimonials.html">Testimonials</a></li>
+										<li class="nav-item"><a class="nav-link" href="faqs.html">FAQs</a></li>
+									</ul>
+								</li>
+								<li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+								<li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+							</ul>
+						</div>
+						<div class="header-btn">
+							<a href="contact.html" class="btn-default">Get Started</a>
+						</div>
+					</div>
+					<div class="navbar-toggle"></div>
+				</div>
+			</nav>
+			<div class="responsive-menu"></div>
+		</div>
+	</header>
+	<!-- Header End -->
+
+	<!-- Page Header Start -->
+	<div class="page-header">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-12">
+					<div class="page-header-box">
+						<h1 class="wow fadeInUp" data-cursor="-opaque">Our <span>Internship Programs</span></h1>
+						<nav class="wow fadeInUp" data-wow-delay="0.2s">
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="index.html">home</a></li>
+								<li class="breadcrumb-item active" aria-current="page">internships</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Page Header End -->
+
+	<!-- Intro Section — reusing our-facts pattern -->
+	<div class="our-facts">
+		<div class="container">
+			<div class="row section-row">
+				<div class="col-lg-12">
+					<div class="section-title section-title-center">
+						<h3 class="wow fadeInUp">learn. build. deploy.</h3>
+						<h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Industry-grade programs
+							built for <span>real-world engineers</span></h2>
+						<p class="wow fadeInUp" data-wow-delay="0.4s" style="max-width:680px;margin:0 auto;">Hands-on,
+							project-driven internship programs that take you from fundamentals to a fully deployed,
+							production-ready engineer with a Capstone Demo Day and official certification at the end
+							of every track.</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-3 col-md-6">
+					<div class="facts-item wow fadeInUp">
+						<div class="facts-item-title">
+							<h3>Programs Available</h3>
+						</div>
+						<div class="facts-item-counter">
+							<h2><span class="counter">4</span></h2>
+							<p>Active Tracks</p>
+						</div>
+						<div class="facts-item-content">
+							<p>AI & Agentic, Spatial Computing, MERN + AI, and Data Science with Python — one track for
+								every ambition.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="facts-item wow fadeInUp" data-wow-delay="0.2s">
+						<div class="facts-item-title">
+							<h3>Duration</h3>
+						</div>
+						<div class="facts-item-counter">
+							<h2>6–8 <span style="font-size:1.4rem;">wks</span></h2>
+							<p>Per Program</p>
+						</div>
+						<div class="facts-item-content">
+							<p>Focused, intensive programs designed to deliver job-ready skills and a deployed capstone
+								project.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="facts-item wow fadeInUp" data-wow-delay="0.4s">
+						<div class="facts-item-title">
+							<h3>Students Trained</h3>
+						</div>
+						<div class="facts-item-counter">
+							<h2><span class="counter">6000</span>+</h2>
+							<p>Across Programs</p>
+						</div>
+						<div class="facts-item-content">
+							<p>Over 6000 students and professionals have trained with MindSprout across AI, web, and
+								spatial computing tracks.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-3 col-md-6">
+					<div class="facts-item wow fadeInUp" data-wow-delay="0.6s">
+						<div class="facts-item-title">
+							<h3>Next Batch</h3>
+						</div>
+						<div class="facts-item-counter">
+							<h2>4 <span style="font-size:1.4rem;">Jun</span></h2>
+							<p>2026</p>
+						</div>
+						<div class="facts-item-content">
+							<p>All four tracks begin simultaneously on 4 June 2026. Seats are limited secure your spot
+								before they fill up.</p>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-12">
+					<div class="section-footer-text wow fadeInUp" data-wow-delay="0.8s">
+						<p><span>Batch starts 4 June 2026</span> Limited seats across all tracks. <a
+								href="contact.html">Register Your Interest</a></p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Intro Section End -->
+
+	<!-- Programs Section Start — reusing page-services layout -->
+	<div class="page-services" style="padding-top:0;">
+		<div class="container">
+			<div class="row section-row">
+				<div class="col-lg-12">
+					<div class="section-title section-title-center">
+						<h3 class="wow fadeInUp">our tracks</h3>
+						<h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Choose the program that
+							fits your <span>ambition</span></h2>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+
+				<!-- Track 1: Full-Stack AI & Agentic -->
+				<div class="col-lg-6 wow fadeInUp">
+					<div class="internship-card">
+						<span class="card-label highlight">Most Popular &nbsp;⚡</span>
+						<h3>Full-Stack AI &amp; Agentic Engineer</h3>
+						<p class="card-desc">From Python fundamentals to autonomous multi-agent pipelines. Build a
+							University-GPT, RAG system, and a full Agentic AI product deployment-ready by Demo Day.
+						</p>
+						<div class="card-meta">
+							<div class="card-meta-item">
+								<i class="fa-regular fa-calendar"></i> 8 Weeks
+							</div>
+							<div class="card-meta-item">
+								<i class="fa-solid fa-users"></i> All Levels
+							</div>
+							<div class="card-meta-item">
+								<i class="fa-solid fa-certificate"></i> Certified
+							</div>
+						</div>
+
+						<p class="highlight-label">Key Highlights</p>
+						<ul class="highlights-list">
+							<li>Python fundamentals, data structures and logic for AI workflows</li>
+							<li>Machine Learning — supervised, unsupervised, and model evaluation</li>
+							<li>Deep Learning and Computer Vision with real datasets</li>
+							<li>Generative AI and LLM integration — build a University-GPT with RAG</li>
+							<li>Agentic AI — design and deploy multi-agent pipeline systems</li>
+							<li>Capstone Project + Demo Day presentation with live feedback</li>
+							<li>Official MindSprout internship certificate on completion</li>
+						</ul>
+
+						<button class="modules-toggle" onclick="toggleModules(this)">
+							View Full Module Breakdown <i class="fa-solid fa-chevron-down"></i>
+						</button>
+						<div class="modules-body">
+							<ol>
+								<li>Module 1 — Python & Data Logic Foundations</li>
+								<li>Module 2 — Machine Learning & Placement Predictor Project</li>
+								<li>Module 3 — Deep Learning & Computer Vision</li>
+								<li>Module 4 — Generative AI, LLMs & RAG Systems (University-GPT)</li>
+								<li>Module 5 — Agentic AI & Multi-Agent Pipeline Systems</li>
+								<li>Module 6 — Capstone Project & Demo Day</li>
+							</ol>
+						</div>
+
+						<a href="https://forms.gle/c8xZsUGAiPgyioHC9" target="_blank" class="card-enroll-btn">Enroll Now
+							→</a>
+					</div>
+				</div>
+
+				<!-- Track 2: AI-Powered Spatial Computing -->
+				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+					<div class="internship-card">
+						<span class="card-label">Spatial Computing &nbsp;🌐</span>
+						<h3>AI-Powered Spatial Computing</h3>
+						<p class="card-desc">Master WebAR, AI injection into immersive experiences, spatial UI design,
+							and 8th Wall development. Build real AR applications that merge the physical and digital
+							worlds.</p>
+						<div class="card-meta">
+							<div class="card-meta-item">
+								<i class="fa-regular fa-calendar"></i> 6 Weeks
+							</div>
+							<div class="card-meta-item">
+								<i class="fa-solid fa-users"></i> Beginner–Mid
+							</div>
+							<div class="card-meta-item">
+								<i class="fa-solid fa-certificate"></i> Certified
+							</div>
+						</div>
+
+						<p class="highlight-label">Key Highlights</p>
+						<ul class="highlights-list">
+							<li>Foundations of Spatial Computing and the WebAR ecosystem</li>
+							<li>Marker tracking and surface detection using 8th Wall</li>
+							<li>Injecting AI capabilities into live WebAR experiences</li>
+							<li>Spatial UX, interaction design and immersive UI principles</li>
+							<li>Real-world AR application verticals — retail, education, events</li>
+							<li>Capstone AR project + Demo Day with industry showcase</li>
+							<li>Official MindSprout internship certificate on completion</li>
+						</ul>
+
+						<button class="modules-toggle" onclick="toggleModules(this)">
+							View Full Module Breakdown <i class="fa-solid fa-chevron-down"></i>
+						</button>
+						<div class="modules-body">
+							<ol>
+								<li>Module 1 — Foundations of Spatial Computing & WebAR</li>
+								<li>Module 2 — Marker & Surface Tracking with 8th Wall</li>
+								<li>Module 3 — Injecting AI into WebAR Experiences</li>
+								<li>Module 4 — UX, Interaction Design & Spatial UI</li>
+								<li>Module 5 — Real-World Applications & Industry Verticals</li>
+								<li>Module 6 — Capstone Project & Demo Day</li>
+							</ol>
+						</div>
+
+						<a href="https://forms.gle/LuRXEEyjzCfaTMWg8" target="_blank" class="card-enroll-btn">Enroll Now
+							→</a>
+					</div>
+				</div>
+
+				<!-- Track 3: Full Stack MERN + AI -->
+				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+					<div class="internship-card">
+						<span class="card-label">Web Development &nbsp;💻</span>
+						<h3>Full Stack MERN Developer with AI Integration</h3>
+						<p class="card-desc">Master the complete MERN stack from advanced JavaScript to full-stack
+							deployment — then supercharge your application with a real AI feature like a chatbot or
+							content generator.</p>
+						<div class="card-meta">
+							<div class="card-meta-item">
+								<i class="fa-regular fa-calendar"></i> 6 Weeks
+							</div>
+							<div class="card-meta-item">
+								<i class="fa-solid fa-users"></i> Beginner–Mid
+							</div>
+							<div class="card-meta-item">
+								<i class="fa-solid fa-certificate"></i> Certified
+							</div>
+						</div>
+
+						<p class="highlight-label">Key Highlights</p>
+						<ul class="highlights-list">
+							<li>Advanced JavaScript, ES6+, async programming and Node.js</li>
+							<li>MongoDB database design, REST APIs and JWT authentication</li>
+							<li>React — components, hooks, state management and API integration</li>
+							<li>Full-stack project: connect frontend to backend end-to-end</li>
+							<li>Deploy live on Vercel and Render with a working domain</li>
+							<li>Add a real AI feature — chatbot or AI content generator</li>
+							<li>Official MindSprout internship certificate on completion</li>
+						</ul>
+
+						<button class="modules-toggle" onclick="toggleModules(this)">
+							View Full Module Breakdown <i class="fa-solid fa-chevron-down"></i>
+						</button>
+						<div class="modules-body">
+							<ol>
+								<li>Module 1 — Advanced JavaScript + Node.js</li>
+								<li>Module 2 — MongoDB + JWT Authentication</li>
+								<li>Module 3 — React + APIs & State Management</li>
+								<li>Module 4 — Full-Stack Integration (Frontend + Backend)</li>
+								<li>Module 5 — Deploy on Vercel + Render</li>
+								<li>Module 6 — Add AI Feature (Chatbot / Content Generator)</li>
+							</ol>
+						</div>
+
+						<a href="https://forms.gle/TATD1vmgi7uRCiFD6" target="_blank" class="card-enroll-btn">Enroll Now
+							→</a>
+					</div>
+				</div>
+
+				<!-- Track 4: Data Scientist with Python — NEW -->
+				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+					<div class="internship-card">
+						<span class="card-label">Data Science &nbsp;📊</span>
+						<h3>Data Scientist with Python</h3>
+						<p class="card-desc">Master the complete data science pipeline — from data wrangling and
+							statistical analysis to machine learning model building, visualization, and storytelling
+							with real-world datasets.</p>
+						<div class="card-meta">
+							<div class="card-meta-item">
+								<i class="fa-regular fa-calendar"></i> 6 Weeks
+							</div>
+							<div class="card-meta-item">
+								<i class="fa-solid fa-users"></i> Beginner–Mid
+							</div>
+							<div class="card-meta-item">
+								<i class="fa-solid fa-certificate"></i> Certified
+							</div>
+						</div>
+
+						<p class="highlight-label">Key Highlights</p>
+						<ul class="highlights-list">
+							<li>Python for data science — NumPy, Pandas, and data manipulation</li>
+							<li>Exploratory Data Analysis (EDA) and statistical thinking</li>
+							<li>Data visualization with Matplotlib, Seaborn and Plotly</li>
+							<li>Machine learning with Scikit-learn — regression, classification, clustering</li>
+							<li>Feature engineering, model evaluation and hyperparameter tuning</li>
+							<li>Real-world capstone project on a live dataset with storytelling</li>
+							<li>Official MindSprout internship certificate on completion</li>
+						</ul>
+
+						<button class="modules-toggle" onclick="toggleModules(this)">
+							View Full Module Breakdown <i class="fa-solid fa-chevron-down"></i>
+						</button>
+						<div class="modules-body">
+							<ol>
+								<li>Module 1 — Python for Data Science (NumPy, Pandas)</li>
+								<li>Module 2 — Exploratory Data Analysis & Statistics</li>
+								<li>Module 3 — Data Visualization (Matplotlib, Seaborn, Plotly)</li>
+								<li>Module 4 — Machine Learning with Scikit-learn</li>
+								<li>Module 5 — Feature Engineering & Model Evaluation</li>
+								<li>Module 6 — Capstone Project & Data Storytelling Demo</li>
+							</ol>
+						</div>
+
+						<a href="contact.html" class="card-enroll-btn">Enroll Now →</a>
+					</div>
+				</div>
+
+				<!-- Track 5: Data Analytics with Python — NEW -->
+				<div class="col-lg-6 wow fadeInUp" data-wow-delay="0.4s">
+					<div class="internship-card">
+						<span class="card-label">Data Analytics &nbsp;📊</span>
+						<h3>Data Analytics with Python</h3>
+						<p class="card-desc">Master the complete data analytics pipeline — from data wrangling and
+							statistical analysis to machine learning model building, visualization, and storytelling
+							with real-world datasets.</p>
+						<div class="card-meta">
+							<div class="card-meta-item">
+								<i class="fa-regular fa-calendar"></i> 6 Weeks
+							</div>
+							<div class="card-meta-item">
+								<i class="fa-solid fa-users"></i> Beginner–Mid
+							</div>
+							<div class="card-meta-item">
+								<i class="fa-solid fa-certificate"></i> Certified
+							</div>
+						</div>
+
+						<p class="highlight-label">Key Highlights</p>
+						<ul class="highlights-list">
+							<li>Python for Data Analytics (NumPy, Pandas, Data Cleaning)</li>
+							<li>Data Visualization (Matplotlib, Seaborn, Tableau basics)</li>
+							<li>Statistics & Data Analysis fundamentals</li>
+							<li>Exploratory Data Analysis (EDA) & real-world datasets</li>
+							<li>SQL for Data Analytics & data querying</li>
+							<li>Capstone Project & Demo Day</li>
+						</ul>
+
+						<button class="modules-toggle" onclick="toggleModules(this)">
+							View Full Module Breakdown <i class="fa-solid fa-chevron-down"></i>
+						</button>
+						<div class="modules-body">
+							<ol>
+								<li>Module 1 — Python for Data Analytics (NumPy, Pandas, Data Cleaning)</li>
+								<li>Module 2 — Exploratory Data Analysis & Statistics</li>
+								<li>Module 3 — Data Visualization (Matplotlib, Seaborn, Tableau basics)</li>
+								<li>Module 4 — SQL for Data Analytics & Data Querying</li>
+								<li>Module 5 — Real-World Data Projects & Dashboards</li>
+								<li>Module 6 — Capstone Project & Data Storytelling Demo</li>
+							</ol>
+						</div>
+
+						<a href="contact.html" class="card-enroll-btn">Enroll Now →</a>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<!-- Programs Section End -->
+
+	<!-- What You Get Section — reusing how-it-work layout -->
+	<div class="how-it-work">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-5">
+					<div class="how-work-content">
+						<div class="section-title">
+							<h3 class="wow fadeInUp">program benefits</h3>
+							<h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Everything included in
+								<span>every track</span>
+							</h2>
+							<p class="wow fadeInUp" data-wow-delay="0.4s">Every MindSprout internship comes with the
+								same commitment — hands-on learning, real projects, and an outcome you can show the
+								world.</p>
+						</div>
+						<div class="what-we-do-body wow fadeInUp" data-wow-delay="0.6s">
+							<ul>
+								<li>Live + recorded sessions for flexible learning</li>
+								<li>Real industry-grade project every week</li>
+								<li>1:1 mentorship and doubt-clearing support</li>
+								<li>Capstone Demo Day with expert feedback</li>
+								<li>Official internship certificate on completion</li>
+								<li>LinkedIn-ready portfolio project on graduation</li>
+							</ul>
+						</div>
+						<div class="what-we-do-button wow fadeInUp" data-wow-delay="0.8s">
+							<a href="contact.html" class="btn-default">Talk to Us</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-7">
+					<div style="padding-left:30px;">
+						<div class="get-grid wow fadeInUp" data-wow-delay="0.4s">
+							<div class="get-item">
+								<span class="get-icon">📜</span>
+								<h4>Certificate</h4>
+								<p>Official MindSprout completion certificate on finishing your program and capstone.
+								</p>
+							</div>
+							<div class="get-item">
+								<span class="get-icon">🛠️</span>
+								<h4>Real Projects</h4>
+								<p>Industry-level deployed projects ready to go straight into your portfolio.</p>
+							</div>
+							<div class="get-item">
+								<span class="get-icon">🎥</span>
+								<h4>Live + Recorded</h4>
+								<p>Mix of live sessions and recordings — learn at your pace without missing anything.
+								</p>
+							</div>
+							<div class="get-item">
+								<span class="get-icon">🏆</span>
+								<h4>Demo Day</h4>
+								<p>Present your capstone to peers and experts on Demo Day and get real feedback.</p>
+							</div>
+							<div class="get-item">
+								<span class="get-icon">🤝</span>
+								<h4>Mentorship</h4>
+								<p>Direct access to your mentor for doubt clearing, code reviews, and guidance.</p>
+							</div>
+							<div class="get-item">
+								<span class="get-icon">🚀</span>
+								<h4>Career Ready</h4>
+								<p>Graduate with a deployed project, a certificate, and skills employers are hiring for.
+								</p>
+							</div>
+							<div class="get-item">
+								<span class="get-icon">📅</span>
+								<h4>Flexible Schedule</h4>
+								<p>Designed to fit students and working professionals — weekday and weekend slots.</p>
+							</div>
+							<div class="get-item">
+								<span class="get-icon">🌐</span>
+								<h4>Online Access</h4>
+								<p>100% online — join from anywhere across India with stable internet access.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- What You Get Section End -->
+
+	<!-- Who Can Apply — reusing what-we-do layout -->
+	<div class="what-we-do">
+		<div class="container">
+			<div class="row align-items-center">
+				<div class="col-lg-6">
+					<div class="what-we-box">
+						<h3 class="text-effect">If you have curiosity and commitment — you're already ready. MindSprout
+							programs are built for anyone who wants to build real things with AI.</h3>
+						<div class="what-we-img wow fadeInUp" data-wow-delay="0.2s">
+							<img src="images/what-we-do-img.png" alt="Who Can Apply">
+						</div>
+						<div class="what-we-img-list wow fadeInUp" data-wow-delay="0.4s">
+							<ul>
+								<li>Students</li>
+								<li>Freshers</li>
+								<li>Professionals</li>
+								<li>Developers</li>
+								<li>Curious Minds</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="what-we-do-content">
+						<div class="section-title">
+							<h3 class="wow fadeInUp">who can apply</h3>
+							<h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Open to everyone with a
+								<span>will to build</span>
+							</h2>
+							<p class="wow fadeInUp" data-wow-delay="0.4s">No prior experience is required for most
+								tracks. All programs begin from fundamentals and progress steadily to advanced,
+								production-level work.</p>
+						</div>
+						<div class="how-work-steps" style="margin-top:28px;">
+							<div class="how-work-item wow fadeInUp" data-wow-delay="0.2s">
+								<div class="how-work-header">
+									<div class="icon-box"><img src="images/icon-how-work-step-1.svg" alt=""></div>
+									<div class="how-work-step-no">
+										<p>profile 01</p>
+									</div>
+								</div>
+								<div class="how-work-item-content">
+									<h3>Students</h3>
+									<p>B.Tech, BCA, MCA, BSc and postgraduate students wanting hands-on AI and web
+										experience before placement season.</p>
+								</div>
+							</div>
+							<div class="how-work-item wow fadeInUp" data-wow-delay="0.4s">
+								<div class="how-work-header">
+									<div class="icon-box"><img src="images/icon-how-work-step-2.svg" alt=""></div>
+									<div class="how-work-step-no">
+										<p>profile 02</p>
+									</div>
+								</div>
+								<div class="how-work-item-content">
+									<h3>Freshers</h3>
+									<p>Recent graduates who want a portfolio of deployed, real-world projects and a
+										certificate to stand out to employers.</p>
+								</div>
+							</div>
+							<div class="how-work-item wow fadeInUp" data-wow-delay="0.6s">
+								<div class="how-work-header">
+									<div class="icon-box"><img src="images/icon-how-work-step-3.svg" alt=""></div>
+									<div class="how-work-step-no">
+										<p>profile 03</p>
+									</div>
+								</div>
+								<div class="how-work-item-content">
+									<h3>Working Professionals</h3>
+									<p>Developers and engineers looking to upskill into AI, Agentic systems, Spatial
+										Computing, or Data Science to stay relevant in 2026.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Who Can Apply End -->
+
+	<!-- FAQ Section — reusing template accordion -->
+	<div class="our-faqs">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="faqs-content">
+						<div class="section-title">
+							<h3 class="wow fadeInUp">faq's</h3>
+							<h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Your internship
+								questions, <span>answered honestly</span></h2>
+						</div>
+						<div class="faqs-button wow fadeInUp" data-wow-delay="0.4s">
+							<a href="faqs.html" class="btn-default">View All FAQs</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-6">
+					<div class="faq-accordion" id="internshipAccordion">
+
+						<div class="accordion-item wow fadeInUp">
+							<h2 class="accordion-header" id="faq1">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#faqA1" aria-expanded="false" aria-controls="faqA1">
+									1. When does the next batch start?
+								</button>
+							</h2>
+							<div id="faqA1" class="accordion-collapse collapse" aria-labelledby="faq1"
+								data-bs-parent="#internshipAccordion">
+								<div class="accordion-body">
+									<p>All four internship tracks begin on <strong>4 June 2026</strong>. Seats are
+										limited across all programs so we recommend registering your interest as early
+										as possible to confirm your spot.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item wow fadeInUp" data-wow-delay="0.2s">
+							<h2 class="accordion-header" id="faq2">
+								<button class="accordion-button" type="button" data-bs-toggle="collapse"
+									data-bs-target="#faqA2" aria-expanded="true" aria-controls="faqA2">
+									2. Do I need prior experience to apply?
+								</button>
+							</h2>
+							<div id="faqA2" class="accordion-collapse collapse show" aria-labelledby="faq2"
+								data-bs-parent="#internshipAccordion">
+								<div class="accordion-body">
+									<p>No prior experience is required. All programs start from fundamentals and
+										progressively build to advanced, production-level skills. Curiosity and
+										commitment are the only prerequisites.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item wow fadeInUp" data-wow-delay="0.4s">
+							<h2 class="accordion-header" id="faq3">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#faqA3" aria-expanded="false" aria-controls="faqA3">
+									3. Will I receive a certificate?
+								</button>
+							</h2>
+							<div id="faqA3" class="accordion-collapse collapse" aria-labelledby="faq3"
+								data-bs-parent="#internshipAccordion">
+								<div class="accordion-body">
+									<p>Yes. Every learner who completes the program and submits their capstone project
+										receives an official MindSprout Technologies internship completion certificate —
+										shareable on LinkedIn and your resume.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item wow fadeInUp" data-wow-delay="0.6s">
+							<h2 class="accordion-header" id="faq4">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#faqA4" aria-expanded="false" aria-controls="faqA4">
+									4. Are sessions live or recorded?
+								</button>
+							</h2>
+							<div id="faqA4" class="accordion-collapse collapse" aria-labelledby="faq4"
+								data-bs-parent="#internshipAccordion">
+								<div class="accordion-body">
+									<p>Both. We run a mix of live online sessions with your cohort and recorded lessons
+										you can revisit anytime. This gives you the structure of a live program with the
+										flexibility of self-paced learning.</p>
+								</div>
+							</div>
+						</div>
+
+						<div class="accordion-item wow fadeInUp" data-wow-delay="0.8s">
+							<h2 class="accordion-header" id="faq5">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+									data-bs-target="#faqA5" aria-expanded="false" aria-controls="faqA5">
+									5. What is Demo Day?
+								</button>
+							</h2>
+							<div id="faqA5" class="accordion-collapse collapse" aria-labelledby="faq5"
+								data-bs-parent="#internshipAccordion">
+								<div class="accordion-body">
+									<p>Demo Day is the final session of every track where you present your completed
+										capstone project to peers and industry experts. You receive live feedback,
+										celebrate your work, and graduate with a deployed project you can show to the
+										world.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- FAQ Section End -->
+
+	<!-- CTA Box — reusing template cta-box -->
+	<div class="cta-box">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12">
+					<div class="cta-box-box">
+						<div class="cta-box-content">
+							<div class="section-title">
+								<h3 class="wow fadeInUp">batch starts 4 june 2026</h3>
+								<h2 class="wow fadeInUp" data-wow-delay="0.2s" data-cursor="-opaque">Seats are limited —
+									secure your spot <span>today</span></h2>
+								<p class="wow fadeInUp" data-wow-delay="0.4s">Pick your track, enroll before the
+									deadline, and start building the skills that the industry actually demands in 2026.
+									All four programs run simultaneously from 4 June.</p>
+							</div>
+							<div class="cta-box-body wow fadeInUp" data-wow-delay="0.6s">
+								<a href="https://forms.gle/c8xZsUGAiPgyioHC9" target="_blank"
+									class="btn-default btn-highlighted">Enroll in AI Program</a>
+								<a href="contact.html" class="btn-default">Ask a Question</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- CTA Box End -->
+
+	<!-- Footer Start -->
+	<footer class="main-footer">
+		<div class="container">
+			<div class="row section-row align-items-center">
+				<div class="col-lg-7">
+					<div class="section-title">
+						<h2 class="wow fadeInUp" data-cursor="-opaque">Let's build something <span>intelligent
+								together!</span></h2>
+						<p class="wow fadeInUp" data-wow-delay="0.2s">Partner with MindSprout to design, build, and
+							deploy AI and Spatial Computing solutions that create real impact for your organization.</p>
+					</div>
+				</div>
+				<div class="col-lg-5">
+					<div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
+						<a href="contact.html" class="btn-default">Let's Work Together</a>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-lg-3 col-md-4">
+					<div class="about-footer">
+						<div class="footer-logo">
+							<img src="images/footer-logo.svg" alt="MindSprout Technologies">
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-5 col-md-8">
+					<div class="footer-contact-box">
+						<div class="footer-links">
+							<h3>Get In Touch</h3>
+							<p><a href="tel:+918699102490">+91 - 869 910 2490</a></p>
+							<p><a href="mailto:info@mindsprout.tech">info@mindsprout.tech</a></p>
+						</div>
+						<div class="footer-links">
+							<h3>Our Location</h3>
+							<p>Mohali, Punjab, India</p>
+						</div>
+						<div class="footer-links">
+							<h3>Follow Us</h3>
+							<p><a href="https://www.linkedin.com/company/mindsprout-technologies"
+									target="_blank">LinkedIn — MindSprout Technologies</a></p>
+							<p><a href="https://www.instagram.com/mindsprout.tech" target="_blank">Instagram —
+									@mindsprout.tech</a></p>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-4">
+					<div class="footer-links footer-privacy-policy">
+						<h3>Subscribe for AI Insights</h3>
+						<div class="footer-newsletter-form">
+							<form id="newslettersForm" action="#" method="POST">
+								<div class="form-group">
+									<input type="email" name="mail" class="form-control" id="mail"
+										placeholder="Enter your email" required>
+									<button type="submit" class="newsletter-btn">subscribe<i
+											class="fa-regular fa-paper-plane"></i></button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-lg-12">
+					<div class="footer-copyright-text">
+						<p>Copyright &copy; 2026 MindSprout Technologies. All Rights Reserved. Founded April 2026.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer End -->
+
+	<!-- Jquery Library File -->
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<!-- Bootstrap js file -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Validator js file -->
+	<script src="js/validator.min.js"></script>
+	<!-- SlickNav js file -->
+	<script src="js/jquery.slicknav.js"></script>
+	<!-- Swiper js file -->
+	<script src="js/swiper-bundle.min.js"></script>
+	<!-- Counter js file -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<script src="js/jquery.counterup.min.js"></script>
+	<!-- Magnific js file -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<!-- Parallax js -->
+	<script src="js/parallaxie.js"></script>
+	<!-- MagicCursor js file -->
+	<script src="js/gsap.min.js"></script>
+	<script src="js/magiccursor.js"></script>
+	<!-- Text Effect js file -->
+	<script src="js/SplitText.js"></script>
+	<script src="js/ScrollTrigger.min.js"></script>
+	<!-- SmoothScroll -->
+	<script src="js/SmoothScroll.js"></script>
+	<!-- YTPlayer js File -->
+	<script src="js/jquery.mb.YTPlayer.min.js"></script>
+	<!-- Wow js file -->
+	<script src="js/wow.min.js"></script>
+	<!-- Main Custom js file -->
+	<script src="js/function.js"></script>
+
+	<script>
+		function toggleModules(btn) {
+			const body = btn.nextElementSibling;
+			const isOpen = body.classList.contains('open');
+			// close all first
+			document.querySelectorAll('.modules-body').forEach(b => b.classList.remove('open'));
+			document.querySelectorAll('.modules-toggle').forEach(b => b.classList.remove('open'));
+			// open this one if it was closed
+			if (!isOpen) {
+				body.classList.add('open');
+				btn.classList.add('open');
+			}
+		}
+	</script>
+</body>
+
+</html>
