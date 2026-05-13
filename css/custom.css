@@ -1140,6 +1140,10 @@ header.main-header .header-sticky.active {
     display: block;
 }
 
+.service-item-image figure img {
+    border-radius: 20px;
+}
+
 .service-list {
     width: 100%;
     max-width: 800px;
