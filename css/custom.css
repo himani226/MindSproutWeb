@@ -232,6 +232,7 @@ body {
     transition: all 0.4s ease-in-out;
     overflow: hidden;
     z-index: 0;
+    margin-top: 24px;
 }
 
 .btn-default:hover {
