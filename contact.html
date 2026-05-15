@@ -116,55 +116,75 @@
                     <div class="conatct-us-form">
                         <!-- Contact Form Start -->
                         <div class="contact-form">
-                            <!-- Section Title Start -->
                             <div class="section-title">
                                 <h2 class="wow fadeInUp" data-cursor="-opaque">Have any questions?</h2>
                             </div>
-                            <!-- Section Title End -->
 
-                            <!-- Contact Form Start -->
-                            <form id="contactForm" action="#" method="POST" data-toggle="validator" class="wow fadeInUp"
-                                data-wow-delay="0.2s">
+                            <form id="contactForm" novalidate class="wow fadeInUp" data-wow-delay="0.2s">
                                 <div class="row">
+
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="fname" class="form-control" id="fname"
+                                        <input type="text" name="fname" id="fname" class="form-control"
                                             placeholder="First Name" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="lname" class="form-control" id="lname"
+                                        <input type="text" name="lname" id="lname" class="form-control"
                                             placeholder="Last Name" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="text" name="phone" class="form-control" id="phone"
+                                        <input type="tel" name="phone" id="phone" class="form-control"
                                             placeholder="Phone No." required>
                                         <div class="help-block with-errors"></div>
                                     </div>
 
                                     <div class="form-group col-md-6 mb-4">
-                                        <input type="email" name="email" class="form-control" id="email"
+                                        <input type="email" name="email" id="email" class="form-control"
                                             placeholder="Email Address" required>
                                         <div class="help-block with-errors"></div>
                                     </div>
 
+                                    <div class="form-group col-md-12 mb-4">
+                                        <select name="service" id="service" class="form-control select-field">
+                                            <option value="" disabled selected>I'm interested in...</option>
+                                            <option value="Expert Talk / Guest Lecture">Expert Talk / Guest Lecture
+                                            </option>
+                                            <option value="Workshops &amp; Bootcamps">Workshops &amp; Bootcamps</option>
+                                            <option value="Faculty Development Program (FDP)">Faculty Development
+                                                Program (FDP)</option>
+                                            <option value="AI &amp; Agentic Solutions">AI &amp; Agentic Solutions
+                                            </option>
+                                            <option value="Spatial Computing / AR &amp; VR">Spatial Computing / AR &amp;
+                                                VR</option>
+                                            <option value="Web Development">Web Development</option>
+                                            <option value="AI Consultation / Strategy">AI Consultation / Strategy
+                                            </option>
+                                            <option value="Internship Enquiry">Internship Enquiry</option>
+                                            <option value="Product / Early Access">Product / Early Access</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+
                                     <div class="form-group col-md-12 mb-5">
-                                        <textarea name="message" class="form-control" id="message" rows="4"
-                                            placeholder="Write Message..."></textarea>
+                                        <textarea name="message" id="message" class="form-control" rows="4"
+                                            placeholder="Write your message..." required></textarea>
                                         <div class="help-block with-errors"></div>
                                     </div>
 
                                     <div class="col-lg-12">
                                         <div class="contact-form-btn">
-                                            <button type="submit" class="btn-default"><span>submit now</span></button>
-                                            <div id="msgSubmit" class="h3 hidden"></div>
+                                            <button type="submit" id="submitBtn" class="btn-default">
+                                                <div class="spinner"></div>
+                                                <span>submit now</span>
+                                            </button>
                                         </div>
                                     </div>
+
                                 </div>
                             </form>
-                            <!-- Contact Form End -->
                         </div>
                         <!-- Contact Form End -->
 
@@ -374,8 +394,76 @@
     <script src="js/wow.min.js"></script>
     <!-- Main Custom js file -->
     <script src="js/function.js"></script>
-</body>
+    <script>
+        // ── Toast helper ────────────────────────────────────────────
+        function showToast(msg, isError) {
+            const toast = document.getElementById('msToast');
+            document.getElementById('toastMsg').textContent = msg;
+            document.getElementById('toastIcon').className = isError
+                ? 'fa-solid fa-circle-exclamation'
+                : 'fa-solid fa-circle-check';
+            toast.classList.toggle('error', !!isError);
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 6000);
+        }
 
-<!-- Mirrored from html.awaikenthemes.com/nextmind/ai-agency/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 11 May 2026 08:58:48 GMT -->
+        // ── Form submit ─────────────────────────────────────────────
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const btn = document.getElementById('submitBtn');
+            const fname = document.getElementById('fname').value.trim();
+            const lname = document.getElementById('lname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const service = document.getElementById('service').value;
+            const message = document.getElementById('message').value.trim();
+
+            // Client-side validation
+            if (!fname || !lname || !email || !phone || !message) {
+                showToast('Please fill in all required fields.', true);
+                return;
+            }
+            if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+                showToast('Please enter a valid email address.', true);
+                return;
+            }
+
+            // Loading state
+            btn.disabled = true;
+            btn.classList.add('loading');
+
+            // Build FormData — sent to send_mail.php
+            const formData = new FormData();
+            formData.append('fname', fname);
+            formData.append('lname', lname);
+            formData.append('email', email);
+            formData.append('phone', phone);
+            formData.append('service', service || 'Not specified');
+            formData.append('message', message);
+
+            fetch('send_mail.php', {
+                method: 'POST',
+                body: formData
+            })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.success) {
+                        showToast("Message sent! We'll reply within 24 hours.", false);
+                        document.getElementById('contactForm').reset();
+                    } else {
+                        showToast(data.message || 'Something went wrong. Please email info@mindsprout.tech directly.', true);
+                    }
+                })
+                .catch(() => {
+                    showToast('Network error. Please email info@mindsprout.tech directly.', true);
+                })
+                .finally(() => {
+                    btn.disabled = false;
+                    btn.classList.remove('loading');
+                });
+        });
+    </script>
+</body>
 
 </html>
