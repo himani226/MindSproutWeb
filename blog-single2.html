@@ -1,0 +1,1038 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <meta name="description"
+        content="AI coding agents now write, test and debug code. Learn where developers can trust AI-generated code, where to verify it, and how developer roles are changing. A practical engineering analysis by MindSprout Technologies.">
+    <meta name="keywords"
+        content="AI coding agents, AI-generated code, AI code review, AI in software development, developer trust in AI, MindSprout Technologies, agentic coding, AI system design">
+    <meta name="author" content="MindSprout Technologies">
+    <!-- Page Title -->
+    <title>AI Coding Agents Are Changing Software Development: Should Developers Trust Them? — MindSprout Technologies</title>
+    <!-- Favicon Icon -->
+    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+    <!-- Google Fonts Css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet">
+    <!-- Bootstrap Css -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <!-- SlickNav Css -->
+    <link href="css/slicknav.min.css" rel="stylesheet">
+    <!-- Swiper Css -->
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <!-- Font Awesome Icon Css-->
+    <link href="css/all.min.css" rel="stylesheet" media="screen">
+    <!-- Animated Css -->
+    <link href="css/animate.css" rel="stylesheet">
+    <!-- Magnific Popup Core Css File -->
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <!-- Mouse Cursor Css File -->
+    <link rel="stylesheet" href="css/mousecursor.css">
+    <!-- Main Custom Css -->
+    <link href="css/custom.css?v=2.2" rel="stylesheet" media="screen">
+</head>
+
+<body>
+
+    <!-- Preloader Start -->
+    <div class="preloader">
+        <div class="loading-container">
+            <div class="loading"></div>
+            <div id="loading-icon"><img src="images/loader.svg" alt="MindSprout Loading"></div>
+        </div>
+    </div>
+    <!-- Preloader End -->
+
+    <!-- Header Start -->
+    <header class="main-header">
+        <div class="header-sticky">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <!-- Logo Start -->
+                    <a class="navbar-brand" href="index.html">
+                        <img src="images/logo.svg" alt="MindSprout Technologies">
+                    </a>
+                    <!-- Logo End -->
+
+                    <!-- Main Menu Start -->
+                    <div class="collapse navbar-collapse main-menu">
+                        <div class="nav-menu-wrapper">
+                            <ul class="navbar-nav mr-auto" id="menu">
+                                <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                                <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                                <li class="nav-item"><a class="nav-link" href="internships.html">Internships</a></li>
+                                <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                                <li class="nav-item active"><a class="nav-link" href="blog.html">Blog</a></li>
+                                <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <!-- Header Btn Start -->
+                        <div class="header-btn">
+                            <a href="contact.html" class="btn-default">Get Started</a>
+                        </div>
+                        <!-- Header Btn End -->
+                    </div>
+                    <!-- Main Menu End -->
+                    <div class="navbar-toggle"></div>
+                </div>
+            </nav>
+            <div class="responsive-menu"></div>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- Blog Single Hero Section Start -->
+    <div class="page-header blog-single-header blog-single-hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <!-- Hero Content Start -->
+                    <div class="blog-hero-content">
+                        <!-- Category Badge -->
+                        <div class="wow fadeInUp">
+                            <span class="blog-hero-badge">
+                                <i class="fa-solid fa-code-merge"></i> AI Engineering &amp; Developer Tools
+                            </span>
+                        </div>
+
+                        <!-- Post Title -->
+                        <h1 class="wow fadeInUp" data-wow-delay="0.1s" data-cursor="-opaque">
+                            AI Coding Agents Are Changing Software Development: <br class="d-none d-md-inline"><span>Should Developers Trust Them?</span>
+                        </h1>
+
+                        <!-- Subtitle / Tagline -->
+                        <p class="blog-hero-subtitle wow fadeInUp" data-wow-delay="0.15s">
+                            The real question isn’t whether AI can write code. It’s how much of that code you’re willing to put your name on.
+                        </p>
+
+                        <!-- Meta Info Row -->
+                        <div class="blog-hero-meta wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="blog-hero-meta-item">
+                                <i class="fa-solid fa-circle-user text-info"></i>
+                                <span>By <strong>Himani</strong></span>
+                            </div>
+                            <div class="blog-hero-meta-item">
+                                <i class="fa-solid fa-calendar-days text-info"></i>
+                                <span>October 2026</span>
+                            </div>
+                            <div class="blog-hero-meta-item">
+                                <i class="fa-solid fa-clock text-info"></i>
+                                <span>6 min read</span>
+                            </div>
+                            <div class="blog-hero-meta-item">
+                                <i class="fa-solid fa-tag text-info"></i>
+                                <span>Agentic AI &amp; Code Quality</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hero Content End -->
+
+                    <!-- Hero Cover Image Start -->
+                    <div class="blog-hero-cover-container wow fadeInUp" data-wow-delay="0.25s">
+                        <div class="blog-hero-cover-wrap">
+                            <figure class="image-anime">
+                                <img src="images/ai-coding-agents-hero.png"
+                                    alt="Developer inspecting AI coding agent with magnifying glass: balancing automated development speed with human verification">
+                            </figure>
+                            <div class="blog-hero-cover-overlay">
+                                <p class="blog-hero-cover-caption">
+                                    <i class="fa-solid fa-magnifying-glass-chart text-info me-2"></i> Developer auditing AI-generated code: balancing speed with critical architectural verification
+                                </p>
+                                <span class="blog-hero-cover-badge">
+                                    <i class="fa-solid fa-award me-1"></i> Featured Engineering Insight
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Hero Cover Image End -->
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Blog Single Hero Section End -->
+
+    <!-- Page Single Post Section Start -->
+    <div class="page-single-post">
+        <div class="container">
+            <div class="row">
+                <!-- Article Column -->
+                <div class="col-lg-8">
+                    <div class="post-content">
+                        <!-- Post Entry Start -->
+                        <div class="post-entry">
+
+                            <!-- Opening Hook -->
+                            <p class="lead" style="font-size: 20px; line-height: 1.7em; color: #fff;">
+                                A year or two ago, AI in coding meant autocomplete. You typed half a line, and the tool guessed the rest.
+                            </p>
+
+                            <p style="font-size: 19px; font-weight: 600; color: var(--accent-color);">
+                                That’s not where we are anymore.
+                            </p>
+
+                            <!-- Trainee Quote Callout -->
+                            <div class="post-callout-box" style="border-left-color: var(--accent-color);">
+                                <h4 style="font-size: 20px; line-height: 1.5em; color: #fff;">
+                                    <i class="fa-solid fa-robot text-info me-2"></i> "Today’s AI coding agents can read an entire codebase, plan a feature, write it across several files, run the tests, fix what breaks, and open a pull request — sometimes while the developer is in a meeting."
+                                </h4>
+                            </div>
+
+                            <p>
+                                At MindSprout, we use these tools in our own AI and AR/VR projects, and we train developers and teams to work with them. The productivity is real. So is the risk.
+                            </p>
+
+                            <p>
+                                That’s why the question in this article matters. Not <em>“Are AI agents good?”</em> but <strong>“How far should we trust them, and where?”</strong>
+                            </p>
+
+                            <!-- Section: First, the Numbers -->
+                            <h2>First, the Numbers: The Verification Gap</h2>
+                            <p>
+                                Developers aren’t rejecting AI. They’re using it heavily while keeping one eye open. Industry research reveals a massive divide between adoption and confidence:
+                            </p>
+
+                            <!-- Verification Gap Chart Image -->
+                            <div class="article-image-box wow fadeInUp">
+                                <figure>
+                                    <img src="images/ai-coding-verification-gap.png"
+                                        alt="Chart showing Verification Gap: 78% AI Usage vs 32% Developer Trust">
+                                </figure>
+                                <div class="article-image-caption">
+                                    <i class="fa-solid fa-chart-column"></i>
+                                    <span><strong>The Verification Gap:</strong> High adoption (78%) paired with cautious trust (32%) highlights why human code review is more crucial than ever.</span>
+                                </div>
+                            </div>
+
+                            <p>
+                                <strong>Stack Overflow’s 2026 Developer Survey</strong>, with more than 30,000 responses, found that <strong>74.2%</strong> of developers rated AI useful for implementation and <strong>72.2%</strong> found it useful for debugging or refactoring. But trust has limits. Nearly half said they trust AI output when they can verify it themselves, and only <strong>6.6%</strong> would trust AI with an important architectural decision.
+                            </p>
+
+                            <p>
+                                <strong>Sonar’s 2026 State of Code survey</strong> shows how large AI’s role has become: developers say <strong>42%</strong> of the code they commit is already AI-generated or assisted, and they expect that to reach <strong>65% by 2027</strong>. Yet <strong>96%</strong> don’t fully trust that AI-generated code is functionally correct, and only <strong>48%</strong> say they always check it before committing.
+                            </p>
+
+                            <!-- Research Stats Grid -->
+                            <div class="stats-grid">
+                                <div class="stat-box wow fadeInUp">
+                                    <div class="stat-number">74.2%</div>
+                                    <div class="stat-label">Find AI Useful for Code Implementation</div>
+                                    <div class="stat-source">Stack Overflow 2026 Survey (30,000+ Devs)</div>
+                                </div>
+                                <div class="stat-box wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="stat-number">42% → 65%</div>
+                                    <div class="stat-label">Codebases Written by AI (Current vs 2027)</div>
+                                    <div class="stat-source">Sonar State of Code 2026</div>
+                                </div>
+                                <div class="stat-box wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="stat-number">96%</div>
+                                    <div class="stat-label">Doubt AI Code Is Functionally Correct</div>
+                                    <div class="stat-source">Sonar Developer Trust Index</div>
+                                </div>
+                                <div class="stat-box wow fadeInUp" data-wow-delay="0.3s">
+                                    <div class="stat-number">Only 48%</div>
+                                    <div class="stat-label">Always Check Code Before Committing</div>
+                                    <div class="stat-source">The Verification Risk Zone</div>
+                                </div>
+                            </div>
+
+                            <div class="post-callout-box" style="border-left-color: #ef4444; background: rgba(239, 68, 68, 0.05);">
+                                <h4 style="color: #f87171; font-size: 19px;">
+                                    <i class="fa-solid fa-triangle-exclamation me-2"></i> The Critical Takeaway
+                                </h4>
+                                <p style="color: #fff; font-size: 16px;">
+                                    Read that again. Almost everyone doubts the code. Only half consistently check it. That gap is where most security vulnerabilities, logic traps, and silent production regressions will come from.
+                                </p>
+                            </div>
+
+                            <!-- Section 1 -->
+                            <h2>1. AI-Generated Code: Fast, Confident, and Sometimes Wrong</h2>
+                            <p>
+                                AI-generated code has a particular quality: <em>it looks finished</em>. It’s well formatted, nicely named, and often comes with thorough comments. That superficial polish makes it dangerously easy to approve without really reading it.
+                            </p>
+
+                            <p>
+                                Here’s a realistic example. Ask an agent for a function to fetch a user by username, and you might get something like this:
+                            </p>
+
+                            <!-- Side-by-side SQL Injection Comparison -->
+                            <div class="comparison-grid">
+                                <div class="comparison-card old-style wow fadeInUp">
+                                    <span class="comparison-badge"><i class="fa-solid fa-bug me-1"></i> Vulnerable (AI Generated)</span>
+                                    <p>Naive string formatting that leaves your backend wide open:</p>
+                                    <pre><code># AI-generated version
+def get_user(conn, username):
+    query = f"SELECT * FROM users WHERE username = '{username}'"
+    return conn.execute(query).fetchone()</code></pre>
+                                </div>
+                                <div class="comparison-card new-style wow fadeInUp" data-wow-delay="0.2s">
+                                    <span class="comparison-badge"><i class="fa-solid fa-shield-halved me-1"></i> Safe (Parameterized Query)</span>
+                                    <p>Bound parameters evaluated by the database driver:</p>
+                                    <pre><code># Safe version: Parameterised query
+def get_user(conn, username):
+    return conn.execute(
+        "SELECT * FROM users WHERE username = ?", (username,)
+    ).fetchone()</code></pre>
+                                </div>
+                            </div>
+
+                            <p>
+                                It works. It passes a quick manual test. And it’s open to <strong>SQL injection</strong>, one of the oldest and most devastating security mistakes in web development.
+                            </p>
+
+                            <p>
+                                This isn’t a rare edge case. <strong>Veracode’s 2026 GenAI Code Security Report</strong> found that the security pass rate of AI-generated code has stalled at around <strong>56%</strong>. Even more interesting, coding-specialised models scored no better on security than general-purpose ones, at 51% and 52% respectively.
+                            </p>
+
+                            <div class="post-callout-box" style="border-left-color: var(--accent-color);">
+                                <h4 style="font-size: 18px; color: #fff;">
+                                    <i class="fa-solid fa-lightbulb text-info me-2"></i> The Lesson
+                                </h4>
+                                <p>
+                                    AI is optimised to produce code that <em>works</em>. Producing code that is <strong>secure, maintainable, and correct for your specific context</strong> is a completely different bar — and a human still has to hold it.
+                                </p>
+                            </div>
+
+                            <!-- Section 2 -->
+                            <h2>2. Debugging: Great at Symptoms, Risky with Causes</h2>
+                            <p>
+                                AI agents are genuinely good debugging partners. They read stack traces quickly, spot syntax typos and wrong variable names, and explain unfamiliar error messages in plain language.
+                            </p>
+
+                            <p>
+                                But there’s a pattern we see often in our engineering workflows: the agent’s goal becomes <em>“make the error go away,”</em> not <em>“find out why it happened.”</em>
+                            </p>
+
+                            <p>
+                                Imagine an order-processing script crashes with a <code>KeyError</code> because some orders have no amount. A quick AI “fix” might look like this:
+                            </p>
+
+                            <!-- Side-by-side Debugging Comparison -->
+                            <div class="comparison-grid">
+                                <div class="comparison-card old-style wow fadeInUp">
+                                    <span class="comparison-badge"><i class="fa-solid fa-circle-xmark me-1"></i> Silent Bug Masking</span>
+                                    <p>Crash stopped, but data corrupted silently:</p>
+                                    <pre><code>def total_amount(orders):
+    total = 0
+    for order in orders:
+        try:
+            total += order["amount"]
+        except KeyError:
+            pass  # crash stopped... silently!
+    return total</code></pre>
+                                </div>
+                                <div class="comparison-card new-style wow fadeInUp" data-wow-delay="0.2s">
+                                    <span class="comparison-badge"><i class="fa-solid fa-circle-check me-1"></i> Root Cause Surfaced</span>
+                                    <p>Identifies broken upstream records immediately:</p>
+                                    <pre><code>def total_amount(orders):
+    missing = [o.get("id") for o in orders if "amount" not in o]
+    if missing:
+        raise ValueError(f"Orders missing amount: {missing}")
+    return sum(o["amount"] for o in orders)</code></pre>
+                                </div>
+                            </div>
+
+                            <p>
+                                The crash is gone. But now the business is under-counting revenue in production, and nobody knows. The real question was never <em>“how do we stop the crash?”</em> It was <strong>“why do some orders have no amount in the first place?”</strong>
+                            </p>
+
+                            <div class="post-callout-box" style="border-left-color: var(--accent-color);">
+                                <h4 style="font-size: 18px; color: #fff;">
+                                    <i class="fa-solid fa-lightbulb text-info me-2"></i> The Lesson
+                                </h4>
+                                <p>
+                                    Let AI help you investigate. Don’t let it decide that a silenced error is a solved problem.
+                                </p>
+                            </div>
+
+                            <!-- Section 3 -->
+                            <h2>3. Testing: Who Decides What “Correct” Means?</h2>
+                            <p>
+                                Ask an agent to write tests, and it will happily produce dozens in seconds. That’s undeniably useful. But there’s a trap: <strong>AI often writes tests based on what the code currently does, not what it should do.</strong>
+                            </p>
+
+                            <p>
+                                Consider this simple discount function with a subtle arithmetic bug:
+                            </p>
+
+                            <div class="code-snippet-box">
+                                <div class="code-snippet-header">
+                                    <span class="lang-tag"><i class="fa-brands fa-python me-1"></i> Python (Buggy Implementation)</span>
+                                </div>
+                                <pre><code>def apply_discount(price, percent):
+    return price - percent  # BUG: subtracts flat units, not a percentage!</code></pre>
+                            </div>
+
+                            <p>
+                                An AI agent reading this code to generate unit tests might generate:
+                            </p>
+
+                            <!-- Side-by-side Testing Comparison -->
+                            <div class="comparison-grid">
+                                <div class="comparison-card old-style wow fadeInUp">
+                                    <span class="comparison-badge"><i class="fa-solid fa-triangle-exclamation me-1"></i> Tautological Test</span>
+                                    <p>Confirms the bug rather than catching it:</p>
+                                    <pre><code>def test_apply_discount():
+    # Pass! But confirms 1000 - 10 = 990
+    assert apply_discount(1000, 10) == 990</code></pre>
+                                </div>
+                                <div class="comparison-card new-style wow fadeInUp" data-wow-delay="0.2s">
+                                    <span class="comparison-badge"><i class="fa-solid fa-bullseye me-1"></i> Requirement-Driven Test</span>
+                                    <p>Written from business intent (10% of 1000 is 900):</p>
+                                    <pre><code>def test_ten_percent_off():
+    # FAILS as intended: catches the bug!
+    assert apply_discount(1000, 10) == 900</code></pre>
+                                </div>
+                            </div>
+
+                            <p>
+                                The first test passes. The bug survives. The test is simply confirming the mistake. The second test fails immediately — which is exactly what tests are built to do.
+                            </p>
+
+                            <div class="post-callout-box" style="border-left-color: var(--accent-color);">
+                                <h4 style="font-size: 18px; color: #fff;">
+                                    <i class="fa-solid fa-scale-balanced text-info me-2"></i> The Examination Rule
+                                </h4>
+                                <p>
+                                    Humans should define what correct behaviour looks like. AI can then help write test variations, cover edge cases, and automate repetitive assertions. <strong>If the same AI writes the code and decides what counts as correct, you’re letting the student mark their own exam.</strong>
+                                </p>
+                            </div>
+
+                            <!-- Section 4 -->
+                            <h2>4. Code Review: The New Bottleneck</h2>
+                            <p>
+                                When code becomes cheap to write, something else becomes expensive: <strong>reading and validating it</strong>.
+                            </p>
+
+                            <p>
+                                AI agents can produce massive pull requests in minutes. Someone still has to review them. Sonar’s survey found that <strong>38% of developers say reviewing AI-generated code takes more effort than reviewing code written by human colleagues</strong>.
+                            </p>
+
+                            <p>
+                                AI code reviewers can assist here. They’re good at catching styling mismatches, missing null checks, and common linting anti-patterns. But they cannot answer the questions that matter most in a real review:
+                            </p>
+
+                            <!-- Key Questions List -->
+                            <div class="post-key-takeaways wow fadeInUp">
+                                <h4><i class="fa-solid fa-clipboard-question text-info me-2"></i> The 4 Questions AI Reviewers Cannot Answer</h4>
+                                <ul>
+                                    <li><strong>Business Alignment:</strong> Does this change match what the customer and business actually need right now?</li>
+                                    <li><strong>Architectural Coherence:</strong> Does it fit our system architecture, or quietly fight existing conventions?</li>
+                                    <li><strong>Data &amp; Migration Impact:</strong> What happens to our active production users, schemas, and historical data?</li>
+                                    <li><strong>Accountability:</strong> Who is responsible and on-call if this change breaks in production at 2:00 AM?</li>
+                                </ul>
+                            </div>
+
+                            <p>
+                                That last point is crucial for engineering leadership: <em>“The agent wrote it”</em> is never an acceptable answer in an incident post-mortem. Responsibility stays squarely with people.
+                            </p>
+
+                            <h4 style="color: #fff; margin: 30px 0 15px;">What Works in Real Engineering Practice:</h4>
+                            <ul style="list-style: none; padding: 0;">
+                                <li style="padding-left: 28px; position: relative; margin-bottom: 12px;">
+                                    <i class="fa-solid fa-check text-info" style="position: absolute; left: 0; top: 4px;"></i>
+                                    <strong>Work in Small, Focused Batches:</strong> Request agents to work in tiny, atomic PRs rather than 1,000-line monolithic diffs.
+                                </li>
+                                <li style="padding-left: 28px; position: relative; margin-bottom: 12px;">
+                                    <i class="fa-solid fa-check text-info" style="position: absolute; left: 0; top: 4px;"></i>
+                                    <strong>Demand Assumption Logs:</strong> Require agents to explain their architectural reasoning and trade-offs in the pull request description.
+                                </li>
+                                <li style="padding-left: 28px; position: relative; margin-bottom: 12px;">
+                                    <i class="fa-solid fa-check text-info" style="position: absolute; left: 0; top: 4px;"></i>
+                                    <strong>Automated Scanners as Filters:</strong> Run SAST and secret scanners as initial automated filters, not as final sign-offs.
+                                </li>
+                                <li style="padding-left: 28px; position: relative; margin-bottom: 12px;">
+                                    <i class="fa-solid fa-check text-info" style="position: absolute; left: 0; top: 4px;"></i>
+                                    <strong>Named Human Approvers:</strong> Always require an accountable human engineer to stamp production deployments.
+                                </li>
+                            </ul>
+
+                            <!-- Section 5 -->
+                            <h2>5. Developer Roles: From Writing Code to Owning Outcomes</h2>
+                            <p>
+                                So, will AI coding agents replace developers?
+                            </p>
+
+                            <!-- Developer Evolution Illustration -->
+                            <div class="article-image-box wow fadeInUp">
+                                <figure>
+                                    <img src="images/developer-roles-evolution.png"
+                                        alt="Illustration of Developer Evolution: Learning fundamentals on laptop to leading AI System Design and Agentic Workflows on whiteboard">
+                                </figure>
+                                <div class="article-image-caption">
+                                    <i class="fa-solid fa-arrow-trend-up"></i>
+                                    <span><strong>The Engineering Paradigm Shift:</strong> The developer's role is moving up a level — from manual syntax typing to system architecture, security modeling, and AI agent orchestration.</span>
+                                </div>
+                            </div>
+
+                            <p>
+                                From what we see across our client deployments and university training programmes at MindSprout, <strong>the job isn’t disappearing — it’s moving up a level</strong>. Less time goes into raw syntax typing, and more time is invested in:
+                            </p>
+
+                            <!-- 5 Pillars -->
+                            <div class="row" style="margin: 30px 0;">
+                                <div class="col-md-6 mb-3">
+                                    <div class="checklist-card" style="margin: 0; height: 100%;">
+                                        <h4><i class="fa-solid fa-pen-ruler"></i> Clear Specifications</h4>
+                                        <p style="font-size: 14px; margin: 0;">Writing explicit, unambiguous system specifications so coding agents implement the exact required behavior.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="checklist-card" style="margin: 0; height: 100%;">
+                                        <h4><i class="fa-solid fa-sitemap"></i> System Architecture</h4>
+                                        <p style="font-size: 14px; margin: 0;">Designing how microservices, event streams, vector databases, and APIs fit together harmoniously.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="checklist-card" style="margin: 0; height: 100%;">
+                                        <h4><i class="fa-solid fa-shield-virus"></i> Threat &amp; Risk Modeling</h4>
+                                        <p style="font-size: 14px; margin: 0;">Anticipating security vulnerabilities, data leaks, and edge-case failure modes before code is deployed.</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="checklist-card" style="margin: 0; height: 100%;">
+                                        <h4><i class="fa-solid fa-vial-circle-check"></i> Verification &amp; Evaluation</h4>
+                                        <p style="font-size: 14px; margin: 0;">Defining true correctness, stress testing agent outputs, and crafting automated evaluation suites.</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="post-callout-box" style="border-left-color: #f59e0b; background: rgba(245, 158, 11, 0.05);">
+                                <h4 style="color: #fbbf24; font-size: 19px;">
+                                    <i class="fa-solid fa-user-graduate me-2"></i> The Junior Developer Paradox
+                                </h4>
+                                <p style="color: #fff; font-size: 15px;">
+                                    Sonar found that junior engineers report the highest speed gains from AI (around <strong>40%</strong>), but are also significantly more likely than seniors to say reviewing AI code takes intense cognitive effort. In other words: <em>AI helps beginners produce more, but it doesn’t automatically help them understand more.</em>
+                                </p>
+                                <p style="margin: 10px 0 0; color: var(--text-color); font-size: 14px;">
+                                    Our advice for students and early-career developers: <strong>Use AI, but never skip the fundamentals. You cannot review what you don't understand.</strong>
+                                </p>
+                            </div>
+
+                            <!-- Section: Trust Framework -->
+                            <h2>So, Should Developers Trust AI Coding Agents?</h2>
+                            <p>
+                                Our honest answer: <strong>Yes, but not equally, and never blindly.</strong> Trust should depend on how risky the task is and how easily the output can be verified.
+                            </p>
+
+                            <p>
+                                At MindSprout Technologies, we apply a clear, three-tier <strong>Traffic Light Trust Framework</strong> across all software projects:
+                            </p>
+
+                            <!-- Trust Framework Matrix Cards -->
+                            <div class="trust-matrix-grid">
+                                <!-- Green Zone -->
+                                <div class="trust-matrix-card green-zone wow fadeInUp">
+                                    <div class="trust-badge-pill">
+                                        <i class="fa-solid fa-circle-check"></i> Green Zone
+                                    </div>
+                                    <div class="trust-matrix-content">
+                                        <h5>Boilerplate, Scaffolding &amp; Utilities</h5>
+                                        <p>CRUD templates, docstrings, regex patterns, unit test boilerplate, mock data generators, and refactoring with robust existing test suites.</p>
+                                    </div>
+                                    <div class="trust-matrix-action">
+                                        <span class="trust-action-badge" style="color: #4ade80;"><i class="fa-solid fa-eye me-1"></i> Trust More, Spot-Check</span>
+                                    </div>
+                                </div>
+
+                                <!-- Amber Zone -->
+                                <div class="trust-matrix-card amber-zone wow fadeInUp" data-wow-delay="0.1s">
+                                    <div class="trust-badge-pill">
+                                        <i class="fa-solid fa-triangle-exclamation"></i> Amber Zone
+                                    </div>
+                                    <div class="trust-matrix-content">
+                                        <h5>Feature Logic, Database Queries &amp; Integrations</h5>
+                                        <p>Complex business logic, multi-table SQL queries, third-party API webhooks, state management flows, and async concurrency.</p>
+                                    </div>
+                                    <div class="trust-matrix-action">
+                                        <span class="trust-action-badge" style="color: #fbbf24;"><i class="fa-solid fa-list-check me-1"></i> Careful Review &amp; Tests</span>
+                                    </div>
+                                </div>
+
+                                <!-- Red Zone -->
+                                <div class="trust-matrix-card red-zone wow fadeInUp" data-wow-delay="0.2s">
+                                    <div class="trust-badge-pill">
+                                        <i class="fa-solid fa-ban"></i> Red Zone
+                                    </div>
+                                    <div class="trust-matrix-content">
+                                        <h5>Security, Payments, Healthcare &amp; Defense</h5>
+                                        <p>Auth workflows, encryption routines, payment processing, database migrations, and systems in government, defense, or industrial safety.</p>
+                                    </div>
+                                    <div class="trust-matrix-action">
+                                        <span class="trust-action-badge" style="color: #f87171;"><i class="fa-solid fa-shield-halved me-1"></i> Verify Line by Line (Zero Trust)</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <p>
+                                At MindSprout, much of our work lives in the red zone: government platforms, defense-related simulation systems, and industrial compliance portals. In these areas, a small hallucinated assumption can be catastrophic. AI accelerates our delivery, but the closer we get to the red zone, the deeper our human verification becomes.
+                            </p>
+
+                            <!-- Section: Checklist -->
+                            <h2>A Quick Practical Checklist</h2>
+                            <p>
+                                Actionable rules for engineering teams navigating the rise of agentic software development:
+                            </p>
+
+                            <!-- Dual Checklist Grid -->
+                            <div class="row" style="margin-top: 30px;">
+                                <!-- Column 1: Leaders -->
+                                <div class="col-md-6">
+                                    <div class="checklist-card wow fadeInUp">
+                                        <h4><i class="fa-solid fa-building-user"></i> For Business Leaders &amp; CTOs</h4>
+                                        <ul>
+                                            <li><strong>Set Explicit Review Policies:</strong> Define which code tiers (auth, billing, schema) require mandatory multi-human review.</li>
+                                            <li><strong>Track Incidents, Not Lines:</strong> Measure software stability, customer defects, and rollback rates rather than raw PR volume.</li>
+                                            <li><strong>Fortify CI/CD Testing:</strong> Invest heavily in automated regression tests and security SAST tooling before scaling agent usage.</li>
+                                            <li><strong>Preserve Human Accountability:</strong> Ensure every single production deployment has a named, accountable engineer.</li>
+                                            <li><strong>Train for Critical Review:</strong> Upskill development teams on auditing AI code rather than just generating prompts.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <!-- Column 2: Developers -->
+                                <div class="col-md-6">
+                                    <div class="checklist-card wow fadeInUp" data-wow-delay="0.2s">
+                                        <h4><i class="fa-solid fa-code"></i> For Developers &amp; Students</h4>
+                                        <ul>
+                                            <li><strong>Read Every Single Line:</strong> Never merge or commit code that you cannot explain line-by-line to a teammate.</li>
+                                            <li><strong>Define Tests Independently:</strong> Write or verify core requirement test assertions yourself before generating code.</li>
+                                            <li><strong>Inquire "Why", Not Just "What":</strong> Push the AI agent to justify its algorithms, dependencies, and assumptions.</li>
+                                            <li><strong>Flag Silent Error Handling:</strong> Treat suppressed exceptions, empty catch blocks, and modified tests as red flags.</li>
+                                            <li><strong>Hone Vanilla Fundamentals:</strong> Practice writing logic from scratch without AI to keep your architectural intuition razor sharp.</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Section: Our Honest Take -->
+                            <h2>Our Honest Take</h2>
+                            <p>
+                                AI coding agents represent one of the most profound paradigm shifts software development has ever experienced. Teams that ignore them will unquestionably fall behind on delivery velocity.
+                            </p>
+
+                            <p>
+                                But teams that trust them blindly will pay a heavy price later — through compounding security vulnerabilities, silent regressions, and bloated codebases that no living human truly understands.
+                            </p>
+
+                            <!-- Final Philosophy Quote Box -->
+                            <div class="post-callout-box" style="border-left-color: var(--accent-color); background: rgba(13, 165, 224, 0.04);">
+                                <h4 style="font-size: 21px; line-height: 1.5em; color: #fff;">
+                                    "The winning approach sits in the middle: let AI do more of the typing, and let humans do more of the thinking."
+                                </h4>
+                            </div>
+
+                            <p style="font-size: 18px; color: #fff; font-weight: 500;">
+                                At MindSprout Technologies, we help organizations adopt AI responsibly — from engineering custom AI-powered applications to training development teams to work effectively, safely, and creatively with agentic tools. If your team is exploring AI coding agents and wants a practical, risk-aware roadmap, we would love to connect.
+                            </p>
+
+                        </div>
+                        <!-- Post Entry End -->
+
+                        <!-- Post Tags & Share Row Start -->
+                        <div class="row align-items-center" style="margin-top: 30px;">
+                            <div class="col-md-7">
+                                <!-- Post Tags Start -->
+                                <div class="post-tags">
+                                    <span class="tag-links">
+                                        <i class="fa-solid fa-tags" style="color: var(--accent-color);"></i>
+                                        <a href="blog.html">#GenerativeSearch</a>
+                                        <a href="blog.html">#GEO</a>
+                                        <a href="blog.html">#AEO</a>
+                                        <a href="blog.html">#AISEO</a>
+                                        <a href="blog.html">#MindSprout</a>
+                                    </span>
+                                </div>
+                                <!-- Post Tags End -->
+                            </div>
+
+                            <div class="col-md-5">
+                                <!-- Post Social Sharing Start -->
+                                <div class="post-social-sharing">
+                                    <ul>
+                                        <li>
+                                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://mindsprout.tech/blog-single2.html"
+                                                target="_blank" title="Share on LinkedIn"><i
+                                                    class="fa-brands fa-linkedin-in"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/intent/tweet?text=AI+Coding+Agents+Are+Changing+Software+Development:+Should+Developers+Trust+Them?&url=https://mindsprout.tech/blog-single2.html"
+                                                target="_blank" title="Share on X"><i
+                                                    class="fa-brands fa-x-twitter"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://mindsprout.tech/blog-single2.html"
+                                                target="_blank" title="Share on Facebook"><i
+                                                    class="fa-brands fa-facebook-f"></i></a>
+                                        </li>
+                                        <li>
+                                            <a href="javascript:void(0)" onclick="navigator.clipboard.writeText(window.location.href); alert('Article URL copied to clipboard!');"
+                                                title="Copy Article Link"><i class="fa-solid fa-link"></i></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- Post Social Sharing End -->
+                            </div>
+                        </div>
+                        <!-- Post Tags & Share Row End -->
+
+                    
+
+                        <!-- Post Navigation (Prev / Next) Start -->
+                        <div class="post-pagination-nav">
+                            <div class="post-pagination-item post-prev">
+                                <a href="blog-single.html">
+                                    <span><i class="fa-solid fa-angle-left me-1"></i> Previous Article</span>
+                                    <h5>AI Search vs. Google Search: How Generative Search Is Changing SEO</h5>
+                                </a>
+                            </div>
+
+                            <div class="post-pagination-item post-next">
+                                <a href="blog-single3.html">
+                                    <span>Next Article <i class="fa-solid fa-angle-right ms-1"></i></span>
+                                    <h5>Spatial Computing: How AR and VR Redefine Interaction</h5>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Post Navigation (Prev / Next) End -->
+
+                    </div>
+                </div>
+
+                <!-- Sidebar Column -->
+                <div class="col-lg-4">
+                    <div class="sidebar-wrapper">
+
+                        <!-- Search Widget -->
+                        <div class="sidebar-search-box wow fadeInUp">
+                            <form class="sidebar-search-form" action="blog.html" method="get">
+                                <input type="text" class="form-control" placeholder="Search insights..." required>
+                                <button type="submit" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                            </form>
+                        </div>
+
+                        <!-- Table of Contents Widget -->
+                        <div class="sidebar-recent-posts wow fadeInUp" data-wow-delay="0.1s">
+                            <h3>Article Contents</h3>
+                            <ul style="padding: 20px 25px;">
+                                <li style="margin-bottom: 12px; font-size: 14px;">
+                                    <i class="fa-solid fa-angle-right text-info me-2"></i><strong>1.</strong> The Verification Gap Data
+                                </li>
+                                <li style="margin-bottom: 12px; font-size: 14px;">
+                                    <i class="fa-solid fa-angle-right text-info me-2"></i><strong>2.</strong> Fast, Confident &amp; Vulnerable Code
+                                </li>
+                                <li style="margin-bottom: 12px; font-size: 14px;">
+                                    <i class="fa-solid fa-angle-right text-info me-2"></i><strong>3.</strong> Debugging Symptoms vs. Root Causes
+                                </li>
+                                <li style="margin-bottom: 12px; font-size: 14px;">
+                                    <i class="fa-solid fa-angle-right text-info me-2"></i><strong>4.</strong> Testing: Who Defines Correctness?
+                                </li>
+                                <li style="margin-bottom: 12px; font-size: 14px;">
+                                    <i class="fa-solid fa-angle-right text-info me-2"></i><strong>5.</strong> Code Review: The New Bottleneck
+                                </li>
+                                <li style="margin-bottom: 12px; font-size: 14px;">
+                                    <i class="fa-solid fa-angle-right text-info me-2"></i><strong>6.</strong> Developer Roles &amp; System Design
+                                </li>
+                                <li style="margin-bottom: 12px; font-size: 14px;">
+                                    <i class="fa-solid fa-angle-right text-info me-2"></i><strong>7.</strong> The MindSprout Trust Matrix
+                                </li>
+                                <li style="margin-bottom: 0; font-size: 14px;">
+                                    <i class="fa-solid fa-angle-right text-info me-2"></i><strong>8.</strong> Actionable Checklists
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Recent Insights Widget -->
+                        <div class="sidebar-recent-posts wow fadeInUp" data-wow-delay="0.2s">
+                            <h3>Related Research</h3>
+                            <ul>
+                                <li class="sidebar-recent-post-item">
+                                    <img src="images/ai-search-vs-google.png" alt="AI Search vs Google Search">
+                                    <div class="sidebar-recent-post-content">
+                                        <h5><a href="blog-single.html">AI Search vs. Google Search: How Generative Search Is Changing SEO</a></h5>
+                                        <span><i class="fa-solid fa-calendar-days"></i> Oct 2026</span>
+                                    </div>
+                                </li>
+                                <li class="sidebar-recent-post-item">
+                                    <img src="images/rag-vs-fine-tuning-hero.png" alt="RAG vs Fine-Tuning">
+                                    <div class="sidebar-recent-post-content">
+                                        <h5><a href="RAG_vs_Fine-Tuning.html">RAG vs Fine-Tuning: Which Approach Is Right for Your AI?</a></h5>
+                                        <span><i class="fa-solid fa-calendar-days"></i> Oct 2026</span>
+                                    </div>
+                                </li>
+                                <li class="sidebar-recent-post-item">
+                                    <img src="images/spatial-computing-hero.jpg" alt="Spatial Computing">
+                                    <div class="sidebar-recent-post-content">
+                                        <h5><a href="blog-single3.html">Spatial Computing: How AR &amp; VR Redefine Tech Interaction</a></h5>
+                                        <span><i class="fa-solid fa-calendar-days"></i> Oct 2026</span>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Sidebar CTA Banner -->
+                        <div class="sidebar-cta-box wow fadeInUp" data-wow-delay="0.3s"
+                            style="background: linear-gradient(135deg, rgba(13, 165, 224, 0.12) 0%, rgba(97, 28, 207, 0.15) 100%); border: 1px solid rgba(13, 165, 224, 0.3); border-radius: 20px; padding: 35px 25px; text-align: center; margin-bottom: 30px;">
+                            <div class="icon-box" style="width: 60px; height: 60px; border-radius: 50%; background: var(--accent-color); display: flex; align-items: center; justify-content: center; margin: 0 auto 20px; color: #fff; font-size: 24px;">
+                                <i class="fa-solid fa-microchip"></i>
+                            </div>
+                            <h4 style="font-size: 20px; color: var(--primary-color); margin-bottom: 10px;">Adopt AI Coding Responsibly</h4>
+                            <p style="font-size: 14px; color: var(--text-color); margin-bottom: 25px;">
+                                Partner with MindSprout to implement automated agent workflows with verifiable security and production-grade guardrails.
+                            </p>
+                            <a href="contact.html" class="btn-default btn-highlighted" style="font-size: 14px; padding: 12px 25px;">Consult Our AI Team</a>
+                        </div>
+
+                        <!-- Topic Tags Widget -->
+                        <div class="sidebar-recent-posts wow fadeInUp" data-wow-delay="0.4s">
+                            <h3>Core Competencies</h3>
+                            <div style="padding: 20px 25px; display: flex; flex-wrap: wrap; gap: 8px;">
+                                <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--accent-color); padding: 8px 14px; border: 1px solid var(--divider-color); border-radius: 100px; font-size: 12px;">Agentic AI</span>
+                                <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--accent-color); padding: 8px 14px; border: 1px solid var(--divider-color); border-radius: 100px; font-size: 12px;">DevOps</span>
+                                <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--accent-color); padding: 8px 14px; border: 1px solid var(--divider-color); border-radius: 100px; font-size: 12px;">Code Quality</span>
+                                <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--accent-color); padding: 8px 14px; border: 1px solid var(--divider-color); border-radius: 100px; font-size: 12px;">System Design</span>
+                                <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--accent-color); padding: 8px 14px; border: 1px solid var(--divider-color); border-radius: 100px; font-size: 12px;">Spatial Computing</span>
+                                <span class="badge" style="background: rgba(255,255,255,0.05); color: var(--accent-color); padding: 8px 14px; border: 1px solid var(--divider-color); border-radius: 100px; font-size: 12px;">RAG Pipelines</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Related Posts Section Start -->
+            <div class="related-posts">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h2 class="related-posts-title wow fadeInUp">Related <span>Insights</span></h2>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-4 col-md-6">
+                        <div class="post-item wow fadeInUp">
+                            <div class="post-featured-image">
+                                <a href="blog-single.html" data-cursor-text="Read">
+                                    <figure class="image-anime">
+                                        <img src="images/ai-search-vs-google.png" alt="AI Search vs. Google Search">
+                                    </figure>
+                                </a>
+                                <span class="post-category-tag">Search &amp; GEO</span>
+                            </div>
+                            <div class="post-meta">
+                                <ul>
+                                    <li><a href="blog-single.html"><i class="fa-solid fa-calendar-days"></i> October 2026</a></li>
+                                    <li><a href="blog-single.html"><i class="fa-solid fa-clock"></i> 7 min read</a></li>
+                                </ul>
+                            </div>
+                            <div class="post-item-content">
+                                <h2><a href="blog-single.html">AI Search vs. Google Search: How Generative Search Is Changing SEO</a></h2>
+                                <p>Ranking on page one is no longer the whole game. Being the answer is. A practical guide on navigating the shift to GEO and AI Overviews.</p>
+                            </div>
+                            <div class="post-item-btn">
+                                <a href="blog-single.html" class="readmore-btn">read more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="post-item wow fadeInUp" data-wow-delay="0.2s">
+                            <div class="post-featured-image">
+                                <a href="RAG_vs_Fine-Tuning.html" data-cursor-text="Read">
+                                    <figure class="image-anime">
+                                        <img src="images/rag-vs-fine-tuning-hero.png" alt="RAG vs Fine-Tuning: Which Approach Is Right for Your AI?">
+                                    </figure>
+                                </a>
+                                <span class="post-category-tag">Enterprise AI &amp; LLMs</span>
+                            </div>
+                            <div class="post-meta">
+                                <ul>
+                                    <li><a href="RAG_vs_Fine-Tuning.html"><i class="fa-solid fa-calendar-days"></i> October 2026</a></li>
+                                    <li><a href="RAG_vs_Fine-Tuning.html"><i class="fa-solid fa-clock"></i> 6 min read</a></li>
+                                </ul>
+                            </div>
+                            <div class="post-item-content">
+                                <h2><a href="RAG_vs_Fine-Tuning.html">RAG vs Fine-Tuning: Which Approach Is Right for Your AI Application?</a></h2>
+                                <p>One changes what your AI knows. The other changes how it behaves. A practical breakdown of when to retrieve vs when to train.</p>
+                            </div>
+                            <div class="post-item-btn">
+                                <a href="RAG_vs_Fine-Tuning.html" class="readmore-btn">read more</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6">
+                        <div class="post-item wow fadeInUp" data-wow-delay="0.4s">
+                            <div class="post-featured-image">
+                                <a href="blog-single3.html" data-cursor-text="Read">
+                                    <figure class="image-anime">
+                                        <img src="images/spatial-computing-hero.jpg" alt="Spatial Computing: How AR and VR Are Redefining How We Use Technology">
+                                    </figure>
+                                </a>
+                                <span class="post-category-tag">Spatial Computing &amp; XR</span>
+                            </div>
+                            <div class="post-meta">
+                                <ul>
+                                    <li><a href="blog-single3.html"><i class="fa-solid fa-calendar-days"></i> October 2026</a></li>
+                                    <li><a href="blog-single3.html"><i class="fa-solid fa-clock"></i> 7 min read</a></li>
+                                </ul>
+                            </div>
+                            <div class="post-item-content">
+                                <h2><a href="blog-single3.html">Spatial Computing: How AR and VR Are Redefining How We Use Technology</a></h2>
+                                <p>For fifty years, computers lived inside rectangles. Explore how spatial computing, WebAR, and Spatial AI bring digital models into the room around you.</p>
+                            </div>
+                            <div class="post-item-btn">
+                                <a href="blog-single3.html" class="readmore-btn">read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Page Single Post Section End -->
+
+    <!-- Footer Start -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="row section-row align-items-center">
+                <div class="col-lg-7">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-cursor="-opaque">Let's build something <span>intelligent
+                                together!</span></h2>
+                        <p class="wow fadeInUp" data-wow-delay="0.2s">Partner with MindSprout to design, build, and
+                            deploy AI and Spatial Computing solutions that create real impact for your organization.</p>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="section-btn wow fadeInUp" data-wow-delay="0.4s">
+                        <a href="contact.html" class="btn-default">Let's Work Together</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-3 col-md-4">
+                    <div class="about-footer">
+                        <div class="footer-logo">
+                            <img src="images/logo.svg" alt="MindSprout Technologies">
+                        </div>
+                        <div class="footer-links" style="margin-top: 30px;">
+
+                            <ul class="social-list">
+                                <li><a href="https://www.linkedin.com/company/mindsprout-technologies" target="_blank"
+                                        class="social-icon" title="LinkedIn"><i
+                                            class="fa-brands fa-linkedin-in"></i></a></li>
+                                <li><a href="https://www.instagram.com/mindsprout.tech" target="_blank"
+                                        class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                                </li>
+                                <li><a href="#" target="_blank" class="social-icon" title="X (Twitter)"><i
+                                            class="fa-brands fa-x-twitter"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-9 col-md-8">
+                    <div class="footer-contact-box">
+                        <div class="footer-links">
+                            <h3>Quick Links</h3>
+                            <ul class="contact-list">
+                                <li>
+                                    <div class="contact-text-footer"><a href="about.html">About Us</a></div>
+                                </li>
+                                <li>
+                                    <div class="contact-text-footer"><a href="services.html">Services</a></div>
+                                </li>
+                                <li>
+                                    <div class="contact-text-footer"><a href="internships.html">Internships</a></div>
+                                </li>
+                                <li>
+                                    <div class="contact-text-footer"><a href="products.html">Products</a></div>
+                                </li>
+                                <li>
+                                    <div class="contact-text-footer"><a href="blog.html">Blog</a></div>
+                                </li>
+                                <li>
+                                    <div class="contact-text-footer"><a href="contact.html">Contact Us</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-links">
+                            <h3>Get In Touch</h3>
+                            <ul class="contact-list">
+                                <li>
+                                    <div class="icon-box-footer"><i class="fa-solid fa-phone"></i></div>
+                                    <div class="contact-text-footer"><a href="tel:+918699102490">+91 - 869 910 2490</a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="icon-box-footer"><i class="fa-solid fa-envelope"></i></div>
+                                    <div class="contact-text-footer"><a
+                                            href="mailto:info@mindsprout.tech">info@mindsprout.tech</a></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer-links">
+                            <h3>Our Location</h3>
+                            <ul class="contact-list">
+                                <li>
+                                    <div class="icon-box-footer"><i class="fa-solid fa-location-dot"></i></div>
+                                    <div class="contact-text-footer">Mohali, Punjab, India</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-12">
+                    <div class="footer-copyright-text">
+                        <p>Copyright &copy; 2026 MindSprout Technologies. All Rights Reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- Jquery Library File -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Bootstrap js file -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Validator js file -->
+    <script src="js/validator.min.js"></script>
+    <!-- SlickNav js file -->
+    <script src="js/jquery.slicknav.js"></script>
+    <!-- Swiper js file -->
+    <script src="js/swiper-bundle.min.js"></script>
+    <!-- Counter js file -->
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <!-- Magnific js file -->
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <!-- Parallax js -->
+    <script src="js/parallaxie.js"></script>
+    <!-- MagicCursor js file -->
+    <script src="js/gsap.min.js"></script>
+    <script src="js/magiccursor.js"></script>
+    <!-- Text Effect js file -->
+    <script src="js/SplitText.js"></script>
+    <script src="js/ScrollTrigger.min.js"></script>
+    <!-- SmoothScroll -->
+    <script src="js/SmoothScroll.js"></script>
+    <!-- YTPlayer js File -->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <!-- Wow js file -->
+    <script src="js/wow.min.js"></script>
+    <!-- Main Custom js file -->
+    <script src="js/function.js"></script>
+</body>
+
+</html>
